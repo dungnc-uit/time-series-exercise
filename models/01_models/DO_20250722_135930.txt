@@ -1,0 +1,23 @@
+--- Model Hyperparameters ---
+DATA_ENHANCEMENT: False
+N_LOOKBACK: 60
+N_FORECAST: 14
+LATENT_DIM: 64
+DROPOUT_RATE: 0.2
+EARLY_STOPPING: False
+EARLY_STOPPING_PATIENCE: 30
+EPOCHS: 50
+USE_SAMPLE_WEIGHTS: False
+future_known_features: ['day', 'month', 'weekday', 'holiday', 'workingday', 'temp', 'feelslike', 'humidity', 'windspeed', 'weathersit']
+future_known_features_use_minmaxscaler: ['day', 'month', 'weekday', 'holiday', 'workingday', 'temp', 'feelslike', 'humidity', 'windspeed', 'weathersit']
+future_known_features_not_use_minmaxscaler: []
+target_feature: consumption
+YEARS_TRAIN_DEV: [2022, 2023, 2024]
+YEARS_TEST: [2025]
+DEV_SIZE: 366
+
+--- Evaluation Results ---
+Metric      Train        Dev
+   MAE 2716280.08 7018318.59
+  RMSE 3634311.14 7627550.01
+  MAPE       3.62       8.34
